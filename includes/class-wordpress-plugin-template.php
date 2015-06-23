@@ -2,10 +2,10 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class WordPress_Plugin_Template {
+class Cloudstitch_Wordpress {
 
 	/**
-	 * The single instance of WordPress_Plugin_Template.
+	 * The single instance of Cloudstitch_Wordpress.
 	 * @var 	object
 	 * @access  private
 	 * @since 	1.0.0
@@ -84,7 +84,7 @@ class WordPress_Plugin_Template {
 	 */
 	public function __construct ( $file = '', $version = '1.0.0' ) {
 		$this->_version = $version;
-		$this->_token = 'wordpress_plugin_template';
+		$this->_token = 'Cloudstitch_Wordpress';
 
 		// Load plugin environment variables
 		$this->file = $file;
@@ -106,7 +106,7 @@ class WordPress_Plugin_Template {
 
 		// Load API for generic admin functions
 		if ( is_admin() ) {
-			$this->admin = new WordPress_Plugin_Template_Admin_API();
+			$this->admin = new Cloudstitch_Wordpress_Admin_API();
 		}
 
 		// Handle localisation
@@ -126,7 +126,7 @@ class WordPress_Plugin_Template {
 
 		if ( ! $post_type || ! $plural || ! $single ) return;
 
-		$post_type = new WordPress_Plugin_Template_Post_Type( $post_type, $plural, $single, $description );
+		$post_type = new Cloudstitch_Wordpress_Post_Type( $post_type, $plural, $single, $description );
 
 		return $post_type;
 	}
@@ -143,7 +143,7 @@ class WordPress_Plugin_Template {
 
 		if ( ! $taxonomy || ! $plural || ! $single ) return;
 
-		$taxonomy = new WordPress_Plugin_Template_Taxonomy( $taxonomy, $plural, $single, $post_types );
+		$taxonomy = new Cloudstitch_Wordpress_Taxonomy( $taxonomy, $plural, $single, $post_types );
 
 		return $taxonomy;
 	}
@@ -218,14 +218,14 @@ class WordPress_Plugin_Template {
 	} // End load_plugin_textdomain ()
 
 	/**
-	 * Main WordPress_Plugin_Template Instance
+	 * Main Cloudstitch_Wordpress Instance
 	 *
-	 * Ensures only one instance of WordPress_Plugin_Template is loaded or can be loaded.
+	 * Ensures only one instance of Cloudstitch_Wordpress is loaded or can be loaded.
 	 *
 	 * @since 1.0.0
 	 * @static
-	 * @see WordPress_Plugin_Template()
-	 * @return Main WordPress_Plugin_Template instance
+	 * @see Cloudstitch_Wordpress()
+	 * @return Main Cloudstitch_Wordpress instance
 	 */
 	public static function instance ( $file = '', $version = '1.0.0' ) {
 		if ( is_null( self::$_instance ) ) {

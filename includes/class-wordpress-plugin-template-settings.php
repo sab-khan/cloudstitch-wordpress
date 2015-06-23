@@ -2,10 +2,10 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class WordPress_Plugin_Template_Settings {
+class Cloudstitch_Wordpress_Settings {
 
 	/**
-	 * The single instance of WordPress_Plugin_Template_Settings.
+	 * The single instance of Cloudstitch_Wordpress_Settings.
 	 * @var 	object
 	 * @access  private
 	 * @since 	1.0.0
@@ -339,14 +339,14 @@ class WordPress_Plugin_Template_Settings {
 	}
 
 	/**
-	 * Main WordPress_Plugin_Template_Settings Instance
+	 * Main Cloudstitch_Wordpress_Settings Instance
 	 *
-	 * Ensures only one instance of WordPress_Plugin_Template_Settings is loaded or can be loaded.
+	 * Ensures only one instance of Cloudstitch_Wordpress_Settings is loaded or can be loaded.
 	 *
 	 * @since 1.0.0
 	 * @static
-	 * @see WordPress_Plugin_Template()
-	 * @return Main WordPress_Plugin_Template_Settings instance
+	 * @see Cloudstitch_Wordpress()
+	 * @return Main Cloudstitch_Wordpress_Settings instance
 	 */
 	public static function instance ( $parent ) {
 		if ( is_null( self::$_instance ) ) {

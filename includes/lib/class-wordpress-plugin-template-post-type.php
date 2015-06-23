@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class WordPress_Plugin_Template_Post_Type {
+class Cloudstitch_Wordpress_Post_Type {
 
 	/**
 	 * The name for the custom post type.

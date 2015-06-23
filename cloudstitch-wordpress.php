@@ -1,19 +1,19 @@
 <?php
 /*
- * Plugin Name: WordPress Plugin Template
+ * Plugin Name: Cloudstitch WordPress Plugin
  * Version: 1.0
- * Plugin URI: http://www.hughlashbrooke.com/
- * Description: This is your starter template for your next WordPress plugin.
- * Author: Hugh Lashbrooke
- * Author URI: http://www.hughlashbrooke.com/
+ * Plugin URI: http://www.cloudstitch.io/wordpress
+ * Description: This plugin lets you inject Cloudstitch widgets into your WordPress blog.
+ * Author: Ted Benson
+ * Author URI: http://www.edwardbenson.com/
  * Requires at least: 4.0
  * Tested up to: 4.0
  *
- * Text Domain: wordpress-plugin-template
+ * Text Domain: cloudstitch-wordpress
  * Domain Path: /lang/
  *
  * @package WordPress
- * @author Hugh Lashbrooke
+ * @author Ted Benson
  * @since 1.0.0
  */
 
@@ -29,19 +29,19 @@ require_once( 'includes/lib/class-wordpress-plugin-template-post-type.php' );
 require_once( 'includes/lib/class-wordpress-plugin-template-taxonomy.php' );
 
 /**
- * Returns the main instance of WordPress_Plugin_Template to prevent the need to use globals.
+ * Returns the main instance of Cloudstitch_Wordpress to prevent the need to use globals.
  *
  * @since  1.0.0
- * @return object WordPress_Plugin_Template
+ * @return object Cloudstitch_Wordpress
  */
-function WordPress_Plugin_Template () {
-	$instance = WordPress_Plugin_Template::instance( __FILE__, '1.0.0' );
+function Cloudstitch_Wordpress () {
+	$instance = Cloudstitch_Wordpress::instance( __FILE__, '1.0.0' );
 
 	if ( is_null( $instance->settings ) ) {
-		$instance->settings = WordPress_Plugin_Template_Settings::instance( $instance );
+		$instance->settings = Cloudstitch_Wordpress_Settings::instance( $instance );
 	}
 
 	return $instance;
 }
 
-WordPress_Plugin_Template();
+Cloudstitch_Wordpress();

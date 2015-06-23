@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class WordPress_Plugin_Template_Admin_API {
+class Cloudstitch_Wordpress_Admin_API {
 
 	/**
 	 * Constructor function

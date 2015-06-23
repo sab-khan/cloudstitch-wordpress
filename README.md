@@ -29,9 +29,9 @@ As of v3.0 of this template, there are a few libraries built into it that will m
 
 Using the [post type API](https://github.com/hlashbrooke/WordPress-Plugin-Template/blob/master/includes/lib/class-wordpress-plugin-template-post-type.php) and the wrapper function from the main plugin class you can easily register new post types with one line of code. For exapmle if you wanted to register a `listing` post type then you could do it like this:
 
-`WordPress_Plugin_Template()->register_post_type( 'listing', __( 'Listings', 'wordpress-plugin-template' ), __( 'Listing', 'wordpress-plugin-template' ) );`
+`Cloudstitch_Wordpress()->register_post_type( 'listing', __( 'Listings', 'wordpress-plugin-template' ), __( 'Listing', 'wordpress-plugin-template' ) );`
 
-*Note that the `WordPress_Plugin_Template()` function name and the `wordpress-plugin-template` text domain will each be unique to your plugin after you have used the cloning script.*
+*Note that the `Cloudstitch_Wordpress()` function name and the `wordpress-plugin-template` text domain will each be unique to your plugin after you have used the cloning script.*
 
 This will register a new post type with all the standard settings. If you would like to modify the post type settings you can use the `{$post_type}_register_args` filter. See [the WordPress codex page](http://codex.wordpress.org/Function_Reference/register_post_type) for all available arguments.
 
@@ -39,9 +39,9 @@ This will register a new post type with all the standard settings. If you would 
 
 Using the [taxonomy API](https://github.com/hlashbrooke/WordPress-Plugin-Template/blob/master/includes/lib/class-wordpress-plugin-template-taxonomy.php) and the wrapper function from the main plugin class you can easily register new taxonomies with one line of code. For exapmle if you wanted to register a `location` taxonomy that applies to the `listing` post type then you could do it like this:
 
-`WordPress_Plugin_Template()->register_taxonomy( 'location', __( 'Locations', 'wordpress-plugin-template' ), __( 'Location', 'wordpress-plugin-template' ), 'listing' );`
+`Cloudstitch_Wordpress()->register_taxonomy( 'location', __( 'Locations', 'wordpress-plugin-template' ), __( 'Location', 'wordpress-plugin-template' ), 'listing' );`
 
-*Note that the `WordPress_Plugin_Template()` function name and the `wordpress-plugin-template` text domain will each be unique to your plugin after you have used the cloning script.*
+*Note that the `Cloudstitch_Wordpress()` function name and the `wordpress-plugin-template` text domain will each be unique to your plugin after you have used the cloning script.*
 
 This will register a new taxonomy with all the standard settings. If you would like to modify the taxonomy settings you can use the `{$taxonomy}_register_args` filter. See [the WordPress codex page](http://codex.wordpress.org/Function_Reference/register_taxonomy) for all available arguments.
 
