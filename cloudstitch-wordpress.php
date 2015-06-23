@@ -18,11 +18,21 @@
  */
 
 
-//[foobar]
+//[cloudstitch]
 function handle_cloudstitch_shortcode( $atts ){
   $a = shortcode_atts( array(
     'widget' => ''
   ), $atts );
-  return "<div widget=\"{$a['widget']}]\"></div>";
+  var $html = <<<HTML
+    <div widget=\"{$a['widget']}]\"></div>";
+    <script>
+      if (typeof CTS == 'undefined') {
+        var s = document.createElement( 'script' );
+        s.setAttribute( 'src', '//static.cloudstitch.io/cloudstitch.js');
+        document.body.appendChild( s );
+      }
+    </script>
+  HTML;
+  return $html;
 }
 add_shortcode('cloudstitch', 'handle_cloudstitch_shortcode' );
