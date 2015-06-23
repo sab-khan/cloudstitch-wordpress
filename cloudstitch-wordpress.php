@@ -17,31 +17,8 @@
  * @since 1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit;
 
-// Load plugin class files
-require_once( 'includes/class-wordpress-plugin-template.php' );
-require_once( 'includes/class-wordpress-plugin-template-settings.php' );
-
-// Load plugin libraries
-require_once( 'includes/lib/class-wordpress-plugin-template-admin-api.php' );
-require_once( 'includes/lib/class-wordpress-plugin-template-post-type.php' );
-require_once( 'includes/lib/class-wordpress-plugin-template-taxonomy.php' );
-
-/**
- * Returns the main instance of Cloudstitch_Wordpress to prevent the need to use globals.
- *
- * @since  1.0.0
- * @return object Cloudstitch_Wordpress
- */
-function Cloudstitch_Wordpress () {
-	$instance = Cloudstitch_Wordpress::instance( __FILE__, '1.0.0' );
-
-	if ( is_null( $instance->settings ) ) {
-		$instance->settings = Cloudstitch_Wordpress_Settings::instance( $instance );
-	}
-
-	return $instance;
+function wphipe_filter_example($title) {
+  return 'Hooked: '.$title;
 }
-
-Cloudstitch_Wordpress();
+add_filter('the_title', 'wphipe_filter_example');
