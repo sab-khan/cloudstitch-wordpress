@@ -23,8 +23,8 @@ function handle_cloudstitch_shortcode( $atts ){
   $a = shortcode_atts( array(
     'widget' => ''
   ), $atts );
-  var $html = <<<HTML
-    <div widget=\"{$a['widget']}]\"></div>";
+  var $html = "
+    <div widget=\"{$a['widget']}]\"></div>
     <script>
       if (typeof CTS == 'undefined') {
         var s = document.createElement( 'script' );
@@ -32,7 +32,7 @@ function handle_cloudstitch_shortcode( $atts ){
         document.body.appendChild( s );
       }
     </script>
-  HTML;
+  ";
   return $html;
 }
 add_shortcode('cloudstitch', 'handle_cloudstitch_shortcode' );
