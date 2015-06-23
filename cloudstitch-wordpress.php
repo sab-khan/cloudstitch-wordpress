@@ -24,7 +24,7 @@ function handle_cloudstitch_shortcode( $atts ){
     'widget' => ''
   ), $atts );
   $html = "" .
-  "  <div widget=\"{$a['widget']}]\"></div>" .
+  "  <div widget=\"{$a['widget']}\"></div>" .
   "  <script>" .
   "    if (typeof CTS == 'undefined') {" .
   "      var s = document.createElement( 'script' );" .
