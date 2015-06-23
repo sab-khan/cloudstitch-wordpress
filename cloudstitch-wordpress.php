@@ -10,7 +10,6 @@
  * Tested up to: 4.0
  *
  * Text Domain: cloudstitch-wordpress
- * Domain Path: /lang/
  *
  * @package WordPress
  * @author Ted Benson
@@ -24,7 +23,7 @@ function handle_cloudstitch_shortcode( $atts ){
     'widget' => ''
   ), $atts );
   $html = "" .
-  "  <div widget=\"{$a['widget']}\"></div>" .
+  "  <div style=\"display: block;\" widget=\"{$a['widget']}\"></div>" .
   "  <script>" .
   "    if (typeof CTS == 'undefined') {" .
   "      var s = document.createElement( 'script' );" .
@@ -34,4 +33,5 @@ function handle_cloudstitch_shortcode( $atts ){
   "  </script>";
   return $html;
 }
+
 add_shortcode('cloudstitch', 'handle_cloudstitch_shortcode' );
