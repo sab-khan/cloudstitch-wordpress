@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: Cloudstitch WordPress Plugin
+ * Plugin Name: Cloudstitch
  * Version: 1.0
  * Plugin URI: http://www.cloudstitch.io/wordpress
  * Description: This plugin lets you inject Cloudstitch widgets into your WordPress blog.
@@ -18,7 +18,11 @@
  */
 
 
-function wphipe_filter_example($title) {
-  return 'Hooked: '.$title;
+//[foobar]
+function inject_widget( $atts ){
+  $a = shortcode_atts( array(
+    'widget' => ''
+  ), $atts );
+  return "<div widget=\"{$a['widget']}]\"></div>";
 }
-add_filter('the_title', 'wphipe_filter_example');
+add_shortcode('cloudstitch', 'foobar_func' );
