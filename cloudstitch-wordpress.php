@@ -19,10 +19,10 @@
 
 
 //[foobar]
-function inject_widget( $atts ){
+function handle_cloudstitch_shortcode( $atts ){
   $a = shortcode_atts( array(
     'widget' => ''
   ), $atts );
   return "<div widget=\"{$a['widget']}]\"></div>";
 }
-add_shortcode('cloudstitch', 'foobar_func' );
+add_shortcode('cloudstitch', 'handle_cloudstitch_shortcode' );
