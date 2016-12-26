@@ -15,6 +15,20 @@
  * @author Ted Benson
  * @since 1.0.0
  */
+ 
+ // Exit if accessed directly
+ if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+ }
+
+ 
+ //Plugin Constants
+ define( 'CLOUDSTITCH_PLUGIN_DIR', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
+ define( 'CLOUDSTITCH_PLUGIN_URL', untrailingslashit( plugins_url( basename( plugin_dir_path( __FILE__ ) ), basename( __FILE__ ) ) ) );
+ 
+ //include files
+ include( CLOUDSTITCH_PLUGIN_DIR . '/includes/class-Cloudstitch-Admin.php' );
+ 
 
 /*
  * [cloudstitch container="handlebars" user="ted" app="app"]

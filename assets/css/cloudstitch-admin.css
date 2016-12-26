@@ -1,0 +1,155 @@
+.cloudstitch-options-wrap h4 {
+	margin:0.33em 0;
+}
+
+.cloudstitch-options-wrap span {
+	font-size:10px;
+}
+
+.settings_page_cloudstitch_options {
+	background:#ffffff;
+}
+
+.cloudstitch-options-wrap {
+	padding: 20px;
+}
+
+.cloudstitch-options-wrap .nav-tab {
+	padding:10px 30px;
+	background: #ffffff;
+	border-color: transparent;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.cloudstitch-options-wrap .nav-tab:hover,
+.cloudstitch-options-wrap .nav-tab:focus,
+.cloudstitch-options-wrap .nav-tab-active {
+    background: #ffffff;
+    border-color: #ccc #ccc transparent;
+    border-width: 1px 1px thin;
+}
+
+.cloudstitch-options-wrap .nav-tab-active {
+	color: #58b6df;
+}
+
+.settings_panel {
+	width:100%;
+}
+
+.cloudstitch-options-wrap .form-table th {
+	padding:5px 0 5px;
+}
+
+.cloudstitch-options-wrap .form-table td {
+	padding:5px 0 5px;
+}
+
+.cloudstitch-options-wrap .button-primary {
+	height: auto;
+	line-height: normal;
+    background: #4d92ce;
+	padding:10px 8px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.cloudstitch-options-wrap .button-primary:hover,
+.cloudstitch-options-wrap .button-primary:focus {
+    background: #5ca2de;
+}
+
+.cloudstitch-options-wrap .button-secondary {
+	background: none;
+	vertical-align: bottom;
+	margin-top: 18px;
+}
+
+.cloudstitch-options-wrap .fa {
+	color: #58b6df;
+	margin-right: 10px;
+}
+
+.cloudstitch-options-wrap .sync-result-table {
+	border:1px solid #ededed;
+}
+
+.cloudstitch-options-wrap .sync-result-table th {
+	text-align: center;
+	background: #f7f7f7;
+	padding: 10px;
+}
+
+.cloudstitch-options-wrap .sync-result-table td {
+	text-align: center;
+	padding: 10px;
+	border-bottom: 1px solid #ededed;
+}
+
+.cloudstitch-options-wrap .sync-result-table th:first-child,
+.cloudstitch-options-wrap .sync-result-table td:first-child {
+	text-align: left;
+}
+
+.cloudstitch-options-wrap .sync-result-table th em {
+	font-size: 9px;
+}
+
+.sync-result-table .sync-count {
+	font-size: 12px;
+	color:#ffffff;
+	font-weight:bold;
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 3px;
+}
+
+.sync-result-table .sync-created {
+	background: #5fb760;
+}
+
+.sync-result-table .sync-modified {
+	background: #f69530;
+}
+
+.sync-result-table .sync-removed {
+	background: #ce0b24;
+}
+
+.sync-result-table .sync-unchanged {
+	background: #797979;
+}
+
+@media screen and (min-width: 789px) {
+    .settings_panel {
+		max-width: 689px;
+	}
+}
+
+@media screen and (max-width: 960px) {
+    .cloudstitch-options-wrap {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.cloudstitch-options-wrap .nav-tab {
+	    padding:6px 10px;
+	}
+    .cloudstitch-options-wrap .nav-tab:hover,
+	.cloudstitch-options-wrap .nav-tab:focus,
+	.cloudstitch-options-wrap .nav-tab-active {
+		border-color: #ccc #ccc;
+		border-width: 1px;
+		-webkit-border-radius: 0;
+	    -moz-border-radius: 0;
+		border-radius: 0;
+	}
+}
+
